@@ -5,6 +5,7 @@ let a  : string;
 a = "asddasd";
 console.log(a)
 
+
 //functions types parameters 
 function count (x : number){
     for(let i = 0 ; i < x ; i ++){
@@ -12,6 +13,7 @@ function count (x : number){
     }
 }
 count(3)
+
 
 //optional parameters using ? 
 function greet(name?: string) {
@@ -26,15 +28,15 @@ function proclaim(status= "not ready...", repeat= 1) {
   }
 proclaim();
 
+
 //EXPLICITLY MAKING THE RETURN TYPE STRING 
-// function createGreeting(name?: string): string {
-//     if (name) {
-//         return `Hello, ${name}!`;
-//       }
-     
-//       return undefined;
-//   //Typescript Error: Type 'undefined' is not assignable to type 'string'. BECAUSE ABOVE AFTER PARAMETERS : STRING     
-// };
+function createGreeting(name?: string): string {
+    if (name) {
+        return `Hello, ${name}!`;
+      }  
+      return undefined;
+  //Typescript Error: Type 'undefined' is not assignable to type 'string'. BECAUSE ABOVE AFTER PARAMETERS : STRING     
+};
 
 
 // Void return types 

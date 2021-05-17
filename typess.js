@@ -26,13 +26,14 @@ function proclaim(status, repeat) {
 }
 proclaim();
 //EXPLICITLY MAKING THE RETURN TYPE STRING 
-// function createGreeting(name?: string): string {
-//     if (name) {
-//         return `Hello, ${name}!`;
-//       }
-//       return undefined;
-//   //Typescript Error: Type 'undefined' is not assignable to type 'string'. BECAUSE ABOVE AFTER PARAMETERS : STRING     
-// };
+function createGreeting(name) {
+    if (name) {
+        return "Hello, " + name + "!";
+    }
+    return undefined;
+    //Typescript Error: Type 'undefined' is not assignable to type 'string'. BECAUSE ABOVE AFTER PARAMETERS : STRING     
+}
+;
 // Void return types 
 // even when we are not returning anything is good idea to use type void
 function logGreeting(name) {
